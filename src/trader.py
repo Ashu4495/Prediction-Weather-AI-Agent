@@ -15,7 +15,7 @@ console = Console()
 STARTING_BALANCE = float(os.getenv("STARTING_BALANCE", "10000"))
 PORTFOLIO_FILE = "portfolio.json"
 MAX_BET_PCT = 0.20  # Never bet more than 20% of bankroll
-MIN_EDGE = 0.10  # Only bet if edge > 10%
+MIN_EDGE = 0.01  # Lowered to 1% to force trades for testing
 DB_FILE = "data/trades.db"
 
 

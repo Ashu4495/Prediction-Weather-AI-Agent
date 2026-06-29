@@ -1,5 +1,4 @@
 import asyncio
-import io
 import os
 import sqlite3
 import sys
@@ -20,8 +19,6 @@ from rich.console import Console
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from src.config import CHECK_INTERVAL_MINUTES
-from src.runner import run_once
-
 # ---------------------------------------------------------
 # Configuration & Setup
 # ---------------------------------------------------------
@@ -83,7 +80,6 @@ def run_once_safe():
         from src.resolve import resolve_pending_trades
         from src.trader import (
             load_portfolio,
-            print_portfolio_summary,
             run_all_trades,
         )
         from src.weather import get_all_cities_weather

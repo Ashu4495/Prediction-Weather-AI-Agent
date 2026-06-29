@@ -3,7 +3,6 @@ import os
 
 from openai import OpenAI
 from rich.console import Console
-from rich.panel import Panel
 from rich.table import Table
 
 from src.config import LLM_BASE_URL, LLM_MODEL, OPENROUTER_API_KEY

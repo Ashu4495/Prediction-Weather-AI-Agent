@@ -12,6 +12,14 @@
 The project features a sleek, real-time web dashboard to monitor the AI's autonomous trading cycles and portfolio performance.
 
 <div align="center">
+  <img src="assets/img2.png" alt="AI Agent Trade Execution Ledger" width="800">
+  <br>
+  <em>AI trade decisions, market odds, and edge calculations.</em>
+</div>
+
+<br>
+
+<div align="center">
   <img src="assets/img4.png" alt="Portfolio Growth" width="800">
   <br>
   <em>Live portfolio tracking and trade resolution ledger.</em>
@@ -77,7 +85,6 @@ python main.py --hermes-run
 | **Risk Engine** | `src/trader.py` | Calculates edge, places Kelly bets, and hedges adverse positions |
 | **Data Fetcher** | `src/weather.py` | Pulls live metrics from Open-Meteo & Apify |
 | **Markets** | `src/markets.py` | Resolves available weather markets (Simulated Polymarket) |
-| **Database** | `src/database.py` | Logs trades and portfolio history to SQLite |
 | **Alerts** | `src/telegram_alert.py` | Broadcasts trades & reasoning to Telegram |
 
 ---
@@ -104,7 +111,7 @@ The AI utilizes the **Kelly Criterion** (specifically, Half-Kelly for reduced vo
 edge = our_probability - market_price
 bet_size = (edge / (1 - market_price)) * 0.5 * bankroll
 ```
-*The agent will automatically `SKIP` trades if the calculated edge does not meet the strict 10% minimum threshold.*
+*The agent will automatically `SKIP` trades if the calculated edge does not meet the strict 1% minimum threshold.*
 
 ### 🛡️ Defensive Hedging
 If the agent detects a severe adverse edge swing (e.g. `edge < -20%`) against an already `PENDING` trade, it will automatically panic-hedge by purchasing the opposite side (e.g. `BUY NO`) to lock in capital and minimize total portfolio downside.

@@ -11,7 +11,7 @@ os.environ["PYTHONIOENCODING"] = "utf-8"
 console = Console()
 
 DB_FILE = "data/trades.db"
-PORTFOLIO_FILE = "portfolio.json"
+
 
 
 def resolve_pending_trades():

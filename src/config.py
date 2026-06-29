@@ -19,7 +19,6 @@ LLM_MODEL = "openrouter/auto"  # Auto-selects best available free model
 LLM_BASE_URL = "https://openrouter.ai/api/v1"
 
 # ─── DATABASE ─────────────────────────────────────────────
-DATABASE_FILE = "data/trades.db"
 
 # ─── THE 5 CITIES ─────────────────────────────────────────
 # Each city has:

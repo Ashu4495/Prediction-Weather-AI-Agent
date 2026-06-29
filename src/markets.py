@@ -4,7 +4,7 @@ import requests
 from rich.console import Console
 from rich.table import Table
 
-from src.config import CITIES
+
 
 os.environ["PYTHONIOENCODING"] = "utf-8"
 console = Console()
